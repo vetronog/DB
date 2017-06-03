@@ -41,8 +41,8 @@ EXPLAIN SELECT  price FROM good
     
 -- 4.8 ORDER BY 1 атрибут
 -- получить продавцов по возрастанию возраста
-EXPLAIN SELECT * from merchant ORDER BY age;
+EXPLAIN SELECT * from merchant WHERE age < 20 ORDER BY age;
 
 -- 4.9 ORDER BY 2 атрибутам
 -- получить продавцов по возрастанию возраста и имен по алфавиту
-EXPLAIN SELECT * from merchant ORDER BY age, full_name;
+EXPLAIN SELECT * from merchant  WHERE merchant.age > 21 ORDER BY age, full_name;
